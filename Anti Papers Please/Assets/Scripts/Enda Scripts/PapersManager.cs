@@ -6,7 +6,19 @@ public class PapersManager : MonoBehaviour
 {
     public static PapersManager instance {get; private set;}
 
+    [SerializeField]
+    private Transform passportParent;
+
     private Person currentPerson;
+
+    [SerializeField]
+    private List<GameObject> passports = new List<GameObject>();
+    [SerializeField]
+    private List<GameObject> idCards = new List<GameObject>();
+    [SerializeField]
+    private List<GameObject> visas = new List<GameObject>();
+    [SerializeField]
+    private GameObject vehicleReg;
 
     //ADD ARRAY FOR PAPERS
     private GameObject[] papers = new GameObject[4];
@@ -28,8 +40,11 @@ public class PapersManager : MonoBehaviour
     {
         currentPerson = person;
         if(passport)
+        {
             Debug.Log("[PapersManager] Spawned passport");
             //spawn Passport
+            Instantiate(passports[0],passportParent);
+        }
         if(idCard)
             Debug.Log("[PapersManager] Spawned id card");
             //spawn Id Card
