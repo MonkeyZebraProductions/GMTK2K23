@@ -1370,14 +1370,14 @@ MonoBehaviour:
   m_VerticalScrollbarEventHandler: {fileID: 0}
   m_LayoutGroup: {fileID: 0}
   m_ScrollSensitivity: 1
-  m_ContentType: 0
+  m_ContentType: 5
   m_InputType: 0
   m_AsteriskChar: 42
   m_KeyboardType: 0
   m_LineType: 0
   m_HideMobileInput: 0
   m_HideSoftKeyboard: 0
-  m_CharacterValidation: 0
+  m_CharacterValidation: 5
   m_RegexValue: 
   m_GlobalPointSize: 14
   m_CharacterLimit: 0
@@ -2725,9 +2725,9 @@ MonoBehaviour:
   m_HideMobileInput: 0
   m_HideSoftKeyboard: 0
   m_CharacterValidation: 6
-  m_RegexValue: ' (^0[1-9]|[12][0-9]|3[01])-(0[1-9]|1[0-2])-(\d{4}$) '
+  m_RegexValue: ^(0[1-9]|1[012])[- /.](0[1-9]|[12][0-9]|3[01])[- /.](19|20)\d\d$
   m_GlobalPointSize: 14
-  m_CharacterLimit: 6
+  m_CharacterLimit: 10000
   m_OnEndEdit:
     m_PersistentCalls:
       m_Calls: []
