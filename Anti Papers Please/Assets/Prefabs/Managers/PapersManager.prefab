@@ -1,0 +1,56 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &3778160633183109733
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3778160633183109755}
+  - component: {fileID: 3778160633183109732}
+  m_Layer: 0
+  m_Name: PapersManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3778160633183109755
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3778160633183109733}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3778160633183109732
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3778160633183109733}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1a934e585c9f824e83d4719ecd0d80b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  passportParent: {fileID: 0}
+  passports:
+  - {fileID: 5675600770475123646, guid: 47f2356da63349a40bb45982a2879cef, type: 3}
+  - {fileID: 2248009282565704977, guid: 2e584d15daa24df4fb1966d5266617c4, type: 3}
+  - {fileID: 6912520561774987200, guid: 2d776482953edb54b8465ead2d906b58, type: 3}
+  - {fileID: 9364786902012441, guid: 9b511b217a468384a8bda0d0349037db, type: 3}
+  - {fileID: 5218478357594594484, guid: f65e5566cb69e9b4088f00c466dda2d5, type: 3}
+  idCards: []
+  visas: []
+  vehicleReg: {fileID: 0}
