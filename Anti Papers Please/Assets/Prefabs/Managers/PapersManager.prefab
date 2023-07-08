@@ -30,7 +30,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &3778160633183109732
 MonoBehaviour:
@@ -51,6 +51,16 @@ MonoBehaviour:
   - {fileID: 6912520561774987200, guid: 2d776482953edb54b8465ead2d906b58, type: 3}
   - {fileID: 9364786902012441, guid: 9b511b217a468384a8bda0d0349037db, type: 3}
   - {fileID: 5218478357594594484, guid: f65e5566cb69e9b4088f00c466dda2d5, type: 3}
-  idCards: []
-  visas: []
-  vehicleReg: {fileID: 0}
+  idCards:
+  - {fileID: 1729366776573568184, guid: 21fcca7710d0b314690b3c0716ffbb38, type: 3}
+  - {fileID: 7473319738192677910, guid: c02a4820407efac42809c9238ba969aa, type: 3}
+  - {fileID: 2115732530092138400, guid: 6c8a9db3aa5ef43419b962c270f5473f, type: 3}
+  - {fileID: 4402614661822058956, guid: b387bb89a0c6d0b4ea6e6f24da710be7, type: 3}
+  - {fileID: 7597639639101260836, guid: ff774201aca180d45abfd0a26e2fbae3, type: 3}
+  visas:
+  - {fileID: 4390890478652757524, guid: 5e8dee722a2989640a0459c3c7d1153f, type: 3}
+  - {fileID: 2701013594954097834, guid: 9a85ddac52f1e404785164492dd47e2a, type: 3}
+  - {fileID: 2868477848583489309, guid: 6e27cc0a33089f34e8f516e28ade20fe, type: 3}
+  - {fileID: 2716058794222815384, guid: 0054ebd2ea8daef498ba3725f5790d4a, type: 3}
+  - {fileID: 3577387247837504309, guid: e02effc7e06ad054cac09947fcc8280a, type: 3}
+  vehicleReg: {fileID: 8417778782363713204, guid: c3eb7592b69f3834fabc43b7d10a596f, type: 3}
