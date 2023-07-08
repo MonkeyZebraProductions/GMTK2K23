@@ -32,6 +32,7 @@ public class DragObject : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDr
         {
             if(parentAfterDrag != null && parentAfterDrag.GetComponent<SnapToGrid>() != null)
             {
+                transform.DetachChildren();
                 transform.SetParent(parentAfterDrag);
             }
             else
