@@ -2641,6 +2641,7 @@ GameObject:
   - component: {fileID: 2033135037}
   - component: {fileID: 2033135036}
   - component: {fileID: 2033135034}
+  - component: {fileID: 2033135038}
   m_Layer: 5
   m_Name: DOB
   m_TagString: Untagged
@@ -2725,9 +2726,9 @@ MonoBehaviour:
   m_HideMobileInput: 0
   m_HideSoftKeyboard: 0
   m_CharacterValidation: 6
-  m_RegexValue: ^(0[1-9]|1[012])[- /.](0[1-9]|[12][0-9]|3[01])[- /.](19|20)\d\d$
+  m_RegexValue: 
   m_GlobalPointSize: 14
-  m_CharacterLimit: 10000
+  m_CharacterLimit: 8
   m_OnEndEdit:
     m_PersistentCalls:
       m_Calls: []
@@ -2805,3 +2806,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2033135032}
   m_CullTransparentMesh: 1
+--- !u!114 &2033135038
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2033135032}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f0b8605a9dd04344827f5f222df448b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inputFieldToTest: {fileID: 2033135034}
+  isValid: 0
+  RegexString: '@"(^0[1-9]|[12][0-9]|3[01])-(0[1-9]|1[0-2])-(\d{2}$)"'
