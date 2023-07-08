@@ -6,6 +6,6 @@ public class Client : Person
 {
     void Start()
     {
-        PapersManager.instance.SpawnPapers(this, true, true, true, false, "Koletchia");
+        PapersManager.instance.SpawnPapers(this, true, true, true, false, PapersManager.Countries.Dawinkus);
     }
 }

@@ -4,6 +4,14 @@ using UnityEngine;
 
 public class PapersManager : MonoBehaviour
 {
+    public enum Countries {
+        Dawinkus,
+        Kanjo,
+        Lunky,
+        Moosemin,
+        Yashush
+    }
+
     public static PapersManager instance {get; private set;}
 
     [SerializeField]
@@ -21,7 +29,7 @@ public class PapersManager : MonoBehaviour
     private GameObject vehicleReg;
 
     //ADD ARRAY FOR PAPERS
-    private GameObject[] papers = new GameObject[4];
+    private List<GameObject> papers = new List<GameObject>();
 
     private void Awake()
     {
@@ -36,14 +44,17 @@ public class PapersManager : MonoBehaviour
     }
 
 
-    public void SpawnPapers(Person person, bool passport, bool idCard, bool visa, bool vehReg, string location)
+    public void SpawnPapers(Person person, bool passport, bool idCard, bool visa, bool vehReg, Countries location)
     {
         currentPerson = person;
+
+        //print
         if(passport)
         {
             Debug.Log("[PapersManager] Spawned passport");
             //spawn Passport
-            Instantiate(passports[0],passportParent);
+            GameObject temp = Instantiate(passports[0],passportParent);
+            papers.Add(temp);
         }
         if(idCard)
             Debug.Log("[PapersManager] Spawned id card");
