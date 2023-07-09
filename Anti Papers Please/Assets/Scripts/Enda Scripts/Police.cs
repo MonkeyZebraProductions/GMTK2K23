@@ -9,8 +9,8 @@ public class Police : Person
     {
         if(!PapersManager.instance.papersHidden || !GameManager.instance.IsGearOut) //gonna have an or from game manager "isGearOut"
         {
-            Speak("Oofy doofy");
-            //end game
+            Speak("STOP RIGHT THERE CRIMINAL!");
+            StartCoroutine(GameManager.instance.EndGameWithWait());
         } else {
             Speak("Just a routine check up... everything looks fine.");
         }

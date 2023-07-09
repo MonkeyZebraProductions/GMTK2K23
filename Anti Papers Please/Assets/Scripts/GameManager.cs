@@ -23,6 +23,8 @@ public class GameManager : MonoBehaviour
     private GameObject currentClient;
     GameObject currentCar;
 
+    GameObject currentCop;
+
     public Canvas GameCanvas, OverCanvas;
 
     //Things to spawn.
@@ -64,9 +66,7 @@ public class GameManager : MonoBehaviour
 
         if(timer>=TimeLimit)
         {
-            OverCanvas.enabled = true;
-            GameCanvas.enabled = false;
-            
+            EndGame();
         }
 
 
@@ -78,6 +78,17 @@ public class GameManager : MonoBehaviour
 
     }
 
+    public IEnumerator EndGameWithWait()
+    {
+        yield return new WaitForSeconds(3);
+        EndGame();
+    }
+
+    public void EndGame()
+    {
+        OverCanvas.enabled = true;
+        GameCanvas.enabled = false;
+    }
 
     private void SpawnClient()
     {
@@ -107,7 +118,9 @@ public class GameManager : MonoBehaviour
             if(UnityEngine.Random.value > 0.5 && !copIsPresent)
             {
                 copIsPresent = true;
-                //Spawn cop
+                SpawnCop();
+                yield return new WaitForSeconds(5);
+                Destroy(currentCop);
             }
         }
         
@@ -115,6 +128,6 @@ public class GameManager : MonoBehaviour
 
     public void SpawnCop()
     {
-        
+        currentCop = Instantiate(cop);
     }
 }
