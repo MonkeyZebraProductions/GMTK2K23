@@ -228,6 +228,7 @@ GameObject:
   - component: {fileID: 519420032}
   - component: {fileID: 519420031}
   - component: {fileID: 519420029}
+  - component: {fileID: 519420033}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -301,6 +302,23 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &519420033
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1a934e585c9f824e83d4719ecd0d80b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  passportParent: {fileID: 0}
+  passports: []
+  idCards: []
+  visas: []
+  vehicleReg: {fileID: 0}
 --- !u!4 &653379412 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2705705018772048799, guid: 36e03aee0f4a6f442b29bec8b336cf0d, type: 3}
@@ -785,11 +803,6 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 5470289235385897412, guid: 65056f276f7cf6749b60254f2a9190eb, type: 3}
   m_PrefabInstance: {fileID: 5470289236706019639}
   m_PrefabAsset: {fileID: 0}
---- !u!223 &1364236534 stripped
-Canvas:
-  m_CorrespondingSourceObject: {fileID: 5470289235385897409, guid: 65056f276f7cf6749b60254f2a9190eb, type: 3}
-  m_PrefabInstance: {fileID: 5470289236706019639}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1415739016 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2705705018956774169, guid: 36e03aee0f4a6f442b29bec8b336cf0d, type: 3}
@@ -917,17 +930,6 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 8417778782363713205, guid: c3eb7592b69f3834fabc43b7d10a596f, type: 3}
   m_PrefabInstance: {fileID: 8417778783968411314}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1747212260 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5470289235231973075, guid: 65056f276f7cf6749b60254f2a9190eb, type: 3}
-  m_PrefabInstance: {fileID: 5470289236706019639}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1767554931
 GameObject:
   m_ObjectHideFlags: 0
@@ -1064,7 +1066,7 @@ MonoBehaviour:
           m_StringArgument: EnterScreen
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1786265523}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Person, Assembly-CSharp
         m_MethodName: Speak
         m_Mode: 5
@@ -1087,7 +1089,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1786265522}
   - component: {fileID: 1786265521}
-  - component: {fileID: 1786265523}
   m_Layer: 0
   m_Name: character (1)
   m_TagString: Untagged
@@ -1163,20 +1164,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1786265523
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1786265520}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c139cdd3a397dc6428f561effd921d38, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Speech: {fileID: 1747212260}
-  SpeechBubble: {fileID: 1364236534}
 --- !u!1 &1904002361
 GameObject:
   m_ObjectHideFlags: 0
@@ -1189,7 +1176,6 @@ GameObject:
   - component: {fileID: 1904002366}
   - component: {fileID: 1904002365}
   - component: {fileID: 1904002364}
-  - component: {fileID: 1904002363}
   m_Layer: 5
   m_Name: SetObjectstoInvisible
   m_TagString: Untagged
@@ -1217,18 +1203,6 @@ RectTransform:
   m_AnchoredPosition: {x: 883.47485, y: -458}
   m_SizeDelta: {x: 153.0503, y: 138.9191}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1904002363
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1904002361}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9af09a740d3147a488ff9efffc5f176f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1904002364
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1275,7 +1249,19 @@ MonoBehaviour:
   m_Group: {fileID: 0}
   onValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 519420033}
+        m_TargetAssemblyTypeName: PapersManager, Assembly-CSharp
+        m_MethodName: ShowHidePapers
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_IsOn: 1
 --- !u!114 &1904002365
 MonoBehaviour:
