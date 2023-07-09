@@ -9,7 +9,7 @@ public class CustomerManager : MonoBehaviour
 		GenerateNewCustomer();
 	}
 
-	
+
 	[ContextMenu("Generate New Customer")]
 	public void GenerateNewCustomer() {
 		Customer newCustomer = new Customer();
