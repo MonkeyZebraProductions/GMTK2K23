@@ -43,6 +43,7 @@ public class PapersManager : MonoBehaviour
 
     //regex expressions
     private List<string> regexPassportNo = new List<string>();
+    private List<string> regexIdNo = new List<string>();
     private List<string> regexVehicleIdNo = new List<string>();
 
     private void Awake()
@@ -55,6 +56,27 @@ public class PapersManager : MonoBehaviour
         } else {
             instance = this;
         }
+
+
+        //Initialise regexs (D,K,L,M,Y)
+        regexPassportNo.Add(@"[a-zA-Z][a-zA-Z]-[0-9][a-zA-Z]-[0-9][0-9]");
+        regexPassportNo.Add(@"[0-9][0-9][0-9]-[0-9][0-9][0-9]");
+        regexPassportNo.Add(@"[a-zA-Z][a-zA-Z][0-9]-[a-zA-Z][0-9][0-9]");
+        regexPassportNo.Add(@"[0-9][0-9][0-9]-[0-9][0-9][a-zA-Z]");
+        regexPassportNo.Add(@"[a-zA-Z][0-9]-[0-9][0-9]-[0-9][0-9]");
+
+        regexIdNo.Add(@"[0-9][0-9]-[a-zA-Z][a-zA-Z]-[0-9][0-9]");
+        regexIdNo.Add(@"[0-9][a-zA-Z]-[a-zA-Z][0-9]-[0-9][a-zA-Z]");
+        regexIdNo.Add(@"[0-9][0-9][a-zA-Z]-[a-zA-Z][0-9][0-9]");
+        regexIdNo.Add(@"[0-9][0-9][0-9]-[0-9][0-9][a-zA-Z]");
+        regexIdNo.Add(@"[a-zA-Z][0-9]-[a-zA-Z][0-9]-[a-zA-Z][0-9]");
+
+        regexVehicleIdNo.Add(@"[0-9][0-9][0-9]-[0-9][0-9][0-9]");
+        regexVehicleIdNo.Add(@"[a-zA-Z][a-zA-Z]-[a-zA-Z][0-9]-[0-9][0-9]");
+        regexVehicleIdNo.Add(@"[0-9][a-zA-Z][0-9]-[0-9][a-zA-Z][0-9]");
+        regexVehicleIdNo.Add(@"[a-zA-Z][a-zA-Z]-[a-zA-Z][a-zA-Z]-[a-zA-Z][a-zA-Z]");
+        regexVehicleIdNo.Add(@"[a-zA-Z][a-zA-Z][a-zA-Z]-[0-9][0-9][0-9]");
+
 
         //Initialise bans lists... oh dear list within list is scuffed
         bans.Add(new List<Countries>());
@@ -158,7 +180,11 @@ public class PapersManager : MonoBehaviour
                 case 0:
                 {
                     //Check pass number
-                    
+                    if(!(Regex.Matches(docScript.PassportNo ,regexPassportNo[(int)currentRequest.passportStyle]).Count >0))
+                    {
+                        valid = false;
+                        currentErrors += " Passport Number wrong";
+                    }
 
                     //Check photo exists
                     if(docScript.PhotoChild == null || docScript.PhotoChild.name == "StampCanWork" || docScript.PhotoChild.name == "StampCantWork")
@@ -170,6 +196,13 @@ public class PapersManager : MonoBehaviour
                 }
                 case 1:
                 {
+                    //Check ID number
+                    if(!(Regex.Matches(docScript.IDNo ,regexIdNo[(int)currentRequest.passportStyle]).Count >0))
+                    {
+                        valid = false;
+                        currentErrors += " ID number wrong format";
+                    }
+
                     //Check photo exists
                     if(docScript.PhotoChild == null || docScript.PhotoChild.name == "StampCanWork" || docScript.PhotoChild.name == "StampCantWork")
                     {
@@ -199,6 +232,11 @@ public class PapersManager : MonoBehaviour
                 case 3:
                 {
                     //Check id format
+                    if(!(Regex.Matches(docScript.VehicleReg ,regexVehicleIdNo[(int)currentRequest.passportStyle]).Count >0))
+                    {
+                        valid = false;
+                        currentErrors += " Wrong car registration";
+                    }
 
                     //Car type matches car.
                     if (currentPerson.car != docScript.VehicleValue)
@@ -220,6 +258,14 @@ public class PapersManager : MonoBehaviour
 
 
         return false;
+    }
+
+    public void ShowHidePapers(bool toggle)
+    {
+        foreach(GameObject paper in papers)
+        {
+            paper.SetActive(toggle);
+        }
     }
 
 }
