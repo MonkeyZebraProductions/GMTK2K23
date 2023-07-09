@@ -6,6 +6,7 @@ public class Client : Person
 {
     private Request request = new Request();
 
+    public int car; //WHEN SPAWNED ASSIGN CAR NUMBER.
 
     void Start()
     {
@@ -17,6 +18,6 @@ public class Client : Person
                                         request.wantsId, 
                                         request.wantsVisa, 
                                         request.wantsVehReg, 
-                                        request.passportStyle);
+                                        request);
     }
 }

@@ -78,11 +78,11 @@ public class PapersManager : MonoBehaviour
     }
 
 
-    public void SpawnPapers(Person person, bool passport, bool idCard, bool visa, bool vehReg, Countries location)
+    public void SpawnPapers(Person person, bool passport, bool idCard, bool visa, bool vehReg, Request request)
     {
         currentPerson = person;
 
-        int countryIndex = (int)location;
+        int countryIndex = (int)request.passportStyle;
         Debug.Log("[Enda] Index is: "+countryIndex);
 
         GameObject temp;
@@ -130,7 +130,8 @@ public class PapersManager : MonoBehaviour
                 for(int j = i+1; j<=papers.Count-1; j++)
                 {
                     //Debug.Log("[Enda] Compare: "+i+" and "+j);
-                    ComparePapers(papers[i], papers[j]);
+                    if(!ComparePapers(papers[i], papers[j]))
+                        valid = false;
                 }
             }
         }
@@ -191,7 +192,7 @@ public class PapersManager : MonoBehaviour
             }
         }
 
-        return false;
+        return valid;
     }
 
     public bool ComparePapers(GameObject paper1, GameObject paper2)
