@@ -12,10 +12,16 @@ public class GameManager : MonoBehaviour
     public GameObject Gear;
     public TMP_Text TimerText;
 
+    private int money;
+
     private float timer;
     public bool IsGearOut;
 
     private bool copIsPresent;
+    private bool clientIsPresent;
+
+    GameObject currentClient;
+    GameObject currentCar;
 
 
     //Things to spawn.
@@ -59,7 +65,32 @@ public class GameManager : MonoBehaviour
         }
 
 
+        if(!clientIsPresent)
+        {
+            clientIsPresent = true;
+            SpawnClient();
+        }
 
+    }
+
+
+    private void SpawnClient()
+    {
+        currentClient = Instantiate(people[UnityEngine.Random.Range(0,people.Count)]);
+        int chosenCar = UnityEngine.Random.Range(0,people.Count);
+        currentClient.GetComponent<Client>().car = chosenCar;
+        currentCar = Instantiate(cars[chosenCar]);
+    }
+
+    public void FinishClient()
+    {
+        if(PapersManager.instance.ValidatePapers())
+        {
+            money+=10;
+        }
+        Destroy(currentClient);
+        Destroy(currentCar);
+        clientIsPresent = false;
     }
 
     IEnumerator CopCoroutine()
