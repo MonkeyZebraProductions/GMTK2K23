@@ -329,7 +329,13 @@ MonoBehaviour:
   - {fileID: 8769062134889535306, guid: 672bb11a040530947ba645fc27546d4d, type: 3}
   - {fileID: 5933619388192365455, guid: dc37a264938b75b47b3cd0c39f5b9c2f, type: 3}
   people:
+  - {fileID: 7293064006451648975, guid: 3a0b9affd18675346b4bf5b3a8c81334, type: 3}
+  - {fileID: 349456274509043453, guid: ab118471b554fa3449bc12897a438b6e, type: 3}
+  - {fileID: 8502636589478853169, guid: 4994b0799392e544fb3fe3ed5ed69021, type: 3}
   - {fileID: 6869288240548980988, guid: bb4a46ae329bcd74283207c4eb44e296, type: 3}
+  - {fileID: 6013223247589102370, guid: 3c1797fa50121624bb0e81a67e1e9fb1, type: 3}
+  - {fileID: 4795686699562117641, guid: 7ccb21fba55836f40adcef423686d380, type: 3}
+  - {fileID: 6940212029577945125, guid: f7e69b11120771a488074ce807b5bf94, type: 3}
   cop: {fileID: 0}
 --- !u!4 &653379412 stripped
 Transform:
@@ -499,6 +505,10 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 1565490623}
     m_Modifications:
+    - target: {fileID: 606619574, guid: 103e59d02601eaf46bf793e1b356e710, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 63160876874843144, guid: 103e59d02601eaf46bf793e1b356e710, type: 3}
       propertyPath: m_Name
       value: Notebook
@@ -586,6 +596,10 @@ PrefabInstance:
     - target: {fileID: 63160876874843151, guid: 103e59d02601eaf46bf793e1b356e710, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 63160878189182518, guid: 103e59d02601eaf46bf793e1b356e710, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
