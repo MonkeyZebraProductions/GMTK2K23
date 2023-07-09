@@ -24,6 +24,7 @@ public class PapersManager : MonoBehaviour
 
     //Current Client details
     private Person currentPerson;
+    private string currentErrors = "";
     //ADD ARRAY FOR PAPERS
     private List<GameObject> papers = new List<GameObject>();
 
@@ -119,6 +120,8 @@ public class PapersManager : MonoBehaviour
 
     public bool ValidatePapers()
     {
+        bool valid = true;
+
         //Compare each paper vs all others
         if(papers.Count != 1)
         {
@@ -140,26 +143,49 @@ public class PapersManager : MonoBehaviour
             Visa = 2
             Veh Reg = 3
             */
-            switch(/*paper.GetComponent<DocumentInfo>()*/1)
+            
+            DocumentInfo docScript = paper.GetComponent<DocumentInfo>();
+
+            switch(docScript.DocumentType)
             {
                 case 0:
                 {
+                    //Check pass number
+                    
 
+                    //Check photo exists
+                    if(docScript.PhotoChild == null || docScript.PhotoChild.name == "StampCanWork" || docScript.PhotoChild.name == "StampCantWork")
+                    {
+                        valid = false;
+                        currentErrors += " Pasport photo Incorrect";
+                    }
                     break;
                 }
                 case 1:
                 {
-                    
+                    //Check photo exists
+                    if(docScript.PhotoChild == null || docScript.PhotoChild.name == "StampCanWork" || docScript.PhotoChild.name == "StampCantWork")
+                    {
+                        valid = false;
+                        currentErrors += " ID photo Incorrect";
+                    }
                     break;
                 }
                 case 2:
                 {
-                    
+                    //Check status correct
+                    if(docScript.PhotoChild == null)
+                    {
+                        valid = false;
+                        currentErrors += " Visa stamp missing";
+                        //DO REQUESTS THING
+                    }
                     break;
                 }
                 case 3:
                 {
-
+                    //Check id format
+                    //Car type matches car.
                     break;
                 }
             }

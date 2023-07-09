@@ -5,4 +5,9 @@ using UnityEngine;
 public class Person : MonoBehaviour
 {
     
+
+    public void Speak(string dialogue)
+    {
+
+    }
 }

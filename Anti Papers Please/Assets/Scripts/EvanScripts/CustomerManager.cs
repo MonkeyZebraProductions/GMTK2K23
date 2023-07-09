@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class CustomerManager : MonoBehaviour
 {
-	private void Start() {
+	/*private void Start() {
 		GenerateNewCustomer();
 	}
 
@@ -14,5 +14,5 @@ public class CustomerManager : MonoBehaviour
 	public void GenerateNewCustomer() {
 		Customer newCustomer = new Customer();
 		newCustomer.DisplayCustomerDetails();
-	}
+	}*/
 }

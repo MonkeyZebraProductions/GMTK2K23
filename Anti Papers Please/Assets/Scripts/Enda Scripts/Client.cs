@@ -4,11 +4,19 @@ using UnityEngine;
 
 public class Client : Person
 {
+    private Request request = new Request();
+
+
     void Start()
     {
-        //Randomise values for things client wants
+        Speak(request.requestDialogue);
 
         //Spawn those papers
-        PapersManager.instance.SpawnPapers(this, true, true, true, true, PapersManager.Countries.Kanjo);
+        PapersManager.instance.SpawnPapers(this, 
+                                        request.wantsPassport, 
+                                        request.wantsId, 
+                                        request.wantsVisa, 
+                                        request.wantsVehReg, 
+                                        request.passportStyle);
     }
 }

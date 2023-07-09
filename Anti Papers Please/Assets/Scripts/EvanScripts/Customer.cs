@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Customer
 {
+    /*
     private string[] customerNames =
     {
         "Bans Lunky",
@@ -25,5 +26,5 @@ public class Customer
         Debug.Log("My name is: " + customerName + "\n"
                   + "My request is for: " + myRequest.myRequestType);
     }
-    
+    */
 }
