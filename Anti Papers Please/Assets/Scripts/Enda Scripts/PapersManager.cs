@@ -113,11 +113,64 @@ public class PapersManager : MonoBehaviour
             temp = Instantiate(vehicleReg,passportParent);
             papers.Add(temp);
         }
+
+        ValidatePapers();
     }
 
     public bool ValidatePapers()
     {
-        //Here's where we're putting the validate code.
+        //Compare each paper vs all others
+        if(papers.Count != 1)
+        {
+            for(int i = 0; i<papers.Count-1; i++)
+            {
+                for(int j = i+1; j<=papers.Count-1; j++)
+                {
+                    //Debug.Log("[Enda] Compare: "+i+" and "+j);
+                    ComparePapers(papers[i], papers[j]);
+                }
+            }
+        }
+        
+        //Do card specific checks
+        foreach(GameObject paper in papers)
+        {
+            /*Passport = 0
+            Id = 1
+            Visa = 2
+            Veh Reg = 3
+            */
+            switch(/*paper.GetComponent<DocumentInfo>()*/1)
+            {
+                case 0:
+                {
+
+                    break;
+                }
+                case 1:
+                {
+                    
+                    break;
+                }
+                case 2:
+                {
+                    
+                    break;
+                }
+                case 3:
+                {
+
+                    break;
+                }
+            }
+        }
+
+        return false;
+    }
+
+    public bool ComparePapers(GameObject paper1, GameObject paper2)
+    {
+        //Here's where we're putting the validate code between 2 papers.
 
 
         return false;
