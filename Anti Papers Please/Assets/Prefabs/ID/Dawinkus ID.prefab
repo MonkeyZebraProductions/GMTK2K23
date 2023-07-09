@@ -2846,7 +2846,6 @@ GameObject:
   - component: {fileID: 1729366777427253703}
   - component: {fileID: 1729366777427253720}
   - component: {fileID: 1729366777427253721}
-  - component: {fileID: 1729366777427253722}
   m_Layer: 5
   m_Name: ID Number
   m_TagString: Untagged
@@ -2972,7 +2971,7 @@ MonoBehaviour:
   m_CharacterValidation: 6
   m_RegexValue: 
   m_GlobalPointSize: 14
-  m_CharacterLimit: 8
+  m_CharacterLimit: 100
   m_OnEndEdit:
     m_PersistentCalls:
       m_Calls: []
@@ -3012,21 +3011,6 @@ MonoBehaviour:
   m_isRichTextEditingAllowed: 0
   m_LineLimit: 0
   m_InputValidator: {fileID: 0}
---- !u!114 &1729366777427253722
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1729366777427253724}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2f0b8605a9dd04344827f5f222df448b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  inputFieldToTest: {fileID: 1729366777427253721}
-  isValid: 0
-  RegexString: (^0[1-9]|[12][0-9]|3[01])-(0[1-9]|1[0-2])-(\d{2}$)"
 --- !u!1 &1729366777439648324
 GameObject:
   m_ObjectHideFlags: 0
