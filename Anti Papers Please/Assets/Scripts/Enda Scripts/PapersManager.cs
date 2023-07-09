@@ -255,9 +255,21 @@ public class PapersManager : MonoBehaviour
     public bool ComparePapers(GameObject paper1, GameObject paper2)
     {
         //Here's where we're putting the validate code between 2 papers.
+        DocumentInfo doc1 = paper1.GetComponent<DocumentInfo>();
+        DocumentInfo doc2 = paper2.GetComponent<DocumentInfo>();
 
+        if(doc1.Name != doc2.Name)
+            return false;
 
-        return false;
+        if(doc1.DocumentType != 3 && doc2.DocumentType != 3)
+        {
+            if(doc1.DOB != doc2.DOB || doc1.BirthplaceValue != doc2.BirthplaceValue)
+            {
+                return false;
+            }
+        }
+
+        return true;
     }
 
     public void ShowHidePapers(bool toggle)
