@@ -111,6 +111,7 @@ public class PapersManager : MonoBehaviour
     public void SpawnPapers(Person person, bool passport, bool idCard, bool visa, bool vehReg, Request request)
     {
         currentPerson = person;
+        currentRequest = request;
 
         int countryIndex = (int)request.passportStyle;
         Debug.Log("[Enda] Index is: "+countryIndex);
@@ -175,11 +176,13 @@ public class PapersManager : MonoBehaviour
             */
             
             DocumentInfo docScript = paper.GetComponent<DocumentInfo>();
+            
 
             switch(docScript.DocumentType)
             {
                 case 0:
                 {
+                    //Debug.Log("--------------------"+(int)currentRequest.passportStyle);
                     //Check pass number
                     if(!(Regex.Matches(docScript.PassportNo ,regexPassportNo[(int)currentRequest.passportStyle]).Count >0))
                     {
@@ -197,6 +200,7 @@ public class PapersManager : MonoBehaviour
                 }
                 case 1:
                 {
+                    //Debug.Log("--------------------"+(int)currentRequest.passportStyle);
                     //Check ID number
                     if(!(Regex.Matches(docScript.IDNo ,regexIdNo[(int)currentRequest.passportStyle]).Count >0))
                     {
@@ -232,6 +236,7 @@ public class PapersManager : MonoBehaviour
                 }
                 case 3:
                 {
+                    //Debug.Log("--------------------"+(int)currentRequest.passportStyle);
                     //Check id format
                     if(!(Regex.Matches(docScript.VehicleReg ,regexVehicleIdNo[(int)currentRequest.passportStyle]).Count >0))
                     {
@@ -280,6 +285,16 @@ public class PapersManager : MonoBehaviour
             paper.SetActive(toggle);
         }
         papersHidden = toggle;
+    }
+
+    public void DestroyPapers()
+    {
+        for(int i = papers.Count-1; i>=0; i--)
+        {
+            Destroy(papers[i]);
+            papers.Remove(papers[i]);
+        }
+        
     }
 
 }

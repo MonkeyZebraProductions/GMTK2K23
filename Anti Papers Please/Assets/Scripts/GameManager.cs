@@ -20,7 +20,7 @@ public class GameManager : MonoBehaviour
     private bool copIsPresent;
     private bool clientIsPresent;
 
-    GameObject currentClient;
+    private GameObject currentClient;
     GameObject currentCar;
 
 
@@ -77,7 +77,7 @@ public class GameManager : MonoBehaviour
     private void SpawnClient()
     {
         currentClient = Instantiate(people[UnityEngine.Random.Range(0,people.Count)]);
-        int chosenCar = UnityEngine.Random.Range(0,people.Count);
+        int chosenCar = UnityEngine.Random.Range(0,cars.Count);
         currentClient.GetComponent<Client>().car = chosenCar;
         currentCar = Instantiate(cars[chosenCar]);
     }
@@ -90,6 +90,7 @@ public class GameManager : MonoBehaviour
         }
         Destroy(currentClient);
         Destroy(currentCar);
+        PapersManager.instance.DestroyPapers();
         clientIsPresent = false;
     }
 
@@ -104,6 +105,11 @@ public class GameManager : MonoBehaviour
                 //Spawn cop
             }
         }
+        
+    }
+
+    public void SpawnCop()
+    {
         
     }
 }
