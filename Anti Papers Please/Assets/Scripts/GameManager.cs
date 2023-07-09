@@ -6,6 +6,7 @@ using System;
 
 public class GameManager : MonoBehaviour
 {
+    public static GameManager instance { get; private set;}
     private bool gameIsRunning;
     public float TimeLimit;
     public GameObject Gear;
@@ -16,7 +17,15 @@ public class GameManager : MonoBehaviour
 
     private bool copIsPresent;
 
-    public static GameManager instance { get; private set;}
+
+    //Things to spawn.
+    [SerializeField]
+    private List<GameObject> cars = new List<GameObject>();
+    [SerializeField]
+    private List<GameObject> people = new List<GameObject>();
+
+    [SerializeField]
+    private GameObject cop;
 
     private void Awake()
     {
@@ -49,7 +58,7 @@ public class GameManager : MonoBehaviour
             Debug.Log("It's Over Bro");
         }
 
-        
+
 
     }
 
