@@ -2970,6 +2970,7 @@ GameObject:
   - component: {fileID: 4390890479194366482}
   - component: {fileID: 4390890479194366481}
   - component: {fileID: 4390890479194366483}
+  - component: {fileID: 79920580009094230}
   m_Layer: 5
   m_Name: Stamp Placement
   m_TagString: Untagged
@@ -3047,6 +3048,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b55cbd77892990479466b04b601a3f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &79920580009094230
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4390890479194366495}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a8695521f0d02e499659fee002a26c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Padding:
+    m_Left: 0
+    m_Right: 0
+    m_Top: 0
+    m_Bottom: 0
+  m_ChildAlignment: 4
+  m_StartCorner: 0
+  m_StartAxis: 0
+  m_CellSize: {x: 128, y: 128}
+  m_Spacing: {x: 0, y: 0}
+  m_Constraint: 0
+  m_ConstraintCount: 2
 --- !u!1 &5909238833001888487
 GameObject:
   m_ObjectHideFlags: 0

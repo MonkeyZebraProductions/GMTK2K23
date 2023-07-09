@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PapersManager : MonoBehaviour
 {
+    public static PapersManager instance {get; private set;}
+
     public enum Countries {
         Dawinkus,
         Kanjo,
@@ -12,7 +14,10 @@ public class PapersManager : MonoBehaviour
         Yashush
     }
 
-    public static PapersManager instance {get; private set;}
+
+    //The country hate list of lists
+    private List<List<Countries>> bans = new List<List<Countries>>();
+
 
     [SerializeField]
     private Transform passportParent;
@@ -41,6 +46,26 @@ public class PapersManager : MonoBehaviour
         } else {
             instance = this;
         }
+
+        //Initialise bans list
+        //Dawinkus
+        bans[0].Add(Countries.Moosemin);
+
+        //Kanjo
+        bans[1].Add(Countries.Yashush);
+        bans[1].Add(Countries.Lunky);
+
+        //Lunky
+        bans[2].Add(Countries.Kanjo);
+        bans[2].Add(Countries.Moosemin);
+
+        //Moosemin
+        bans[3].Add(Countries.Dawinkus);
+        bans[3].Add(Countries.Lunky);
+        bans[3].Add(Countries.Yashush);
+
+        //Yashush
+        bans[4].Add(Countries.Lunky);
     }
 
 
