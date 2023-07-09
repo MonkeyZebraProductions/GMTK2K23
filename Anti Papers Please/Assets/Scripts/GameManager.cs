@@ -10,7 +10,7 @@ public class GameManager : MonoBehaviour
     private bool gameIsRunning;
     public float TimeLimit;
     public GameObject Gear;
-    public TMP_Text TimerText;
+    public TMP_Text TimerText, MoneyText;
 
     private int money;
 
@@ -23,6 +23,7 @@ public class GameManager : MonoBehaviour
     private GameObject currentClient;
     GameObject currentCar;
 
+    public Canvas GameCanvas, OverCanvas;
 
     //Things to spawn.
     [SerializeField]
@@ -59,9 +60,13 @@ public class GameManager : MonoBehaviour
         timer += Time.deltaTime;
         TimerText.text = "Time: " + TimeSpan.FromSeconds(timer).ToString("mm\\:ss");
 
+        MoneyText.text = "$" + money;
+
         if(timer>=TimeLimit)
         {
-            Debug.Log("It's Over Bro");
+            OverCanvas.enabled = true;
+            GameCanvas.enabled = false;
+            
         }
 
 
