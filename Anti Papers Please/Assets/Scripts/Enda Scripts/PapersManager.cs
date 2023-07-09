@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Text.RegularExpressions;
 
 public class PapersManager : MonoBehaviour
 {
@@ -24,6 +25,7 @@ public class PapersManager : MonoBehaviour
 
     //Current Client details
     private Person currentPerson;
+    private Request currentRequest;
     private string currentErrors = "";
     //ADD ARRAY FOR PAPERS
     private List<GameObject> papers = new List<GameObject>();
@@ -38,6 +40,10 @@ public class PapersManager : MonoBehaviour
     [SerializeField]
     private GameObject vehicleReg;
 
+
+    //regex expressions
+    private List<string> regexPassportNo = new List<string>();
+    private List<string> regexVehicleIdNo = new List<string>();
 
     private void Awake()
     {
@@ -180,13 +186,26 @@ public class PapersManager : MonoBehaviour
                         valid = false;
                         currentErrors += " Visa stamp missing";
                         //DO REQUESTS THING
+                    } else {
+                        if((currentRequest.visaCanWork == true && docScript.PhotoChild.name == "StampCantWork") 
+                        || (currentRequest.visaCanWork == false && docScript.PhotoChild.name == "StampCanWork"))
+                        {
+                            valid = false;
+                            currentErrors += " Wrong stamp used";
+                        }
                     }
                     break;
                 }
                 case 3:
                 {
                     //Check id format
+
                     //Car type matches car.
+                    if (currentPerson.car != docScript.VehicleValue)
+                    {
+                        valid = false;
+                        currentErrors += " Wrong vehicle";
+                    }
                     break;
                 }
             }
