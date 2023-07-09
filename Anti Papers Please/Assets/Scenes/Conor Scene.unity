@@ -123,6 +123,17 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!114 &72156335 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5470289235231973075, guid: 65056f276f7cf6749b60254f2a9190eb, type: 3}
+  m_PrefabInstance: {fileID: 5470289236706019639}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &109039380
 GameObject:
   m_ObjectHideFlags: 0
@@ -228,7 +239,6 @@ GameObject:
   - component: {fileID: 519420032}
   - component: {fileID: 519420031}
   - component: {fileID: 519420029}
-  - component: {fileID: 519420033}
   - component: {fileID: 519420034}
   m_Layer: 0
   m_Name: Main Camera
@@ -303,23 +313,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &519420033
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 519420028}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c1a934e585c9f824e83d4719ecd0d80b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  passportParent: {fileID: 0}
-  passports: []
-  idCards: []
-  visas: []
-  vehicleReg: {fileID: 0}
 --- !u!114 &519420034
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -795,6 +788,69 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1121591101
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 2
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3778160633183109732, guid: 855e309a4ba7d384cb1466e91e1084c4, type: 3}
+      propertyPath: passportParent
+      value: 
+      objectReference: {fileID: 1565490623}
+    - target: {fileID: 3778160633183109733, guid: 855e309a4ba7d384cb1466e91e1084c4, type: 3}
+      propertyPath: m_Name
+      value: PapersManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 3778160633183109755, guid: 855e309a4ba7d384cb1466e91e1084c4, type: 3}
+      propertyPath: m_RootOrder
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3778160633183109755, guid: 855e309a4ba7d384cb1466e91e1084c4, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3778160633183109755, guid: 855e309a4ba7d384cb1466e91e1084c4, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3778160633183109755, guid: 855e309a4ba7d384cb1466e91e1084c4, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3778160633183109755, guid: 855e309a4ba7d384cb1466e91e1084c4, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3778160633183109755, guid: 855e309a4ba7d384cb1466e91e1084c4, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3778160633183109755, guid: 855e309a4ba7d384cb1466e91e1084c4, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3778160633183109755, guid: 855e309a4ba7d384cb1466e91e1084c4, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3778160633183109755, guid: 855e309a4ba7d384cb1466e91e1084c4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3778160633183109755, guid: 855e309a4ba7d384cb1466e91e1084c4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3778160633183109755, guid: 855e309a4ba7d384cb1466e91e1084c4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_AddedGameObjects: []
+  m_SourcePrefab: {fileID: 100100000, guid: 855e309a4ba7d384cb1466e91e1084c4, type: 3}
 --- !u!4 &1146653484 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7842324045269554985, guid: a10def864d751d140b9b48bdcf00efb3, type: 3}
@@ -911,6 +967,11 @@ MonoBehaviour:
 --- !u!224 &1364236531 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 5470289235385897412, guid: 65056f276f7cf6749b60254f2a9190eb, type: 3}
+  m_PrefabInstance: {fileID: 5470289236706019639}
+  m_PrefabAsset: {fileID: 0}
+--- !u!223 &1364236534 stripped
+Canvas:
+  m_CorrespondingSourceObject: {fileID: 5470289235385897409, guid: 65056f276f7cf6749b60254f2a9190eb, type: 3}
   m_PrefabInstance: {fileID: 5470289236706019639}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &1415739016 stripped
@@ -1576,6 +1637,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1786265522}
   - component: {fileID: 1786265521}
+  - component: {fileID: 1786265523}
   m_Layer: 0
   m_Name: character (1)
   m_TagString: Untagged
@@ -1651,6 +1713,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1786265523
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1786265520}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c139cdd3a397dc6428f561effd921d38, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Speech: {fileID: 72156335}
+  SpeechBubble: {fileID: 1364236534}
+  car: 0
 --- !u!1 &1904002361
 GameObject:
   m_ObjectHideFlags: 0
@@ -1737,7 +1814,7 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 519420033}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: PapersManager, Assembly-CSharp
         m_MethodName: ShowHidePapers
         m_Mode: 0
