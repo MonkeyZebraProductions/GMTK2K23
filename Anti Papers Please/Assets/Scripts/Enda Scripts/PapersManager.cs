@@ -143,7 +143,6 @@ public class PapersManager : MonoBehaviour
             papers.Add(temp);
         }
 
-        ValidatePapers();
     }
 
     public bool ValidatePapers()
