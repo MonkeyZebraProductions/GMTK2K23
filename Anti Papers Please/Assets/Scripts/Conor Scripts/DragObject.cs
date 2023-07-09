@@ -9,6 +9,15 @@ public class DragObject : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDr
     public Transform parentAfterDrag;
     public bool IsSnap;
     public Image RayTarget;
+    public AudioSource PickUpSound, PutDownSound;
+
+    void Start()
+    {
+        if (RayTarget != null)
+        {
+            RayTarget.raycastTarget = true;
+        }
+    }
     public void OnBeginDrag(PointerEventData eventData)
     {
         Debug.Log("Begin Drag");
@@ -17,6 +26,7 @@ public class DragObject : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDr
         {
             RayTarget.raycastTarget = false;
         }
+        PickUpSound.Play();
     }
 
     public void OnDrag(PointerEventData eventData)
@@ -40,5 +50,6 @@ public class DragObject : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDr
                 RayTarget.raycastTarget = true;
             }
         }
+        PutDownSound.Play();
     }
 }

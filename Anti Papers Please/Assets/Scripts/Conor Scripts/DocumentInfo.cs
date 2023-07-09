@@ -58,7 +58,7 @@ public class DocumentInfo : MonoBehaviour
             VehicleValue = VehicleType.value;
         }
 
-        if (PhotoSlot != null)
+        if (PhotoSlot != null && PhotoSlot.transform.childCount>0)
         {
             PhotoChild = PhotoSlot.transform.GetChild(0).gameObject;
         }
