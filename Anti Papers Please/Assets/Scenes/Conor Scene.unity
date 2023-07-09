@@ -325,7 +325,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b43727113fa08414f95d210ee1a33270, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TimeLimit: 0
+  TimeLimit: 120
   Gear: {fileID: 2022532962}
   TimerText: {fileID: 1439458119}
   IsGearOut: 0
@@ -851,6 +851,17 @@ PrefabInstance:
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 855e309a4ba7d384cb1466e91e1084c4, type: 3}
+--- !u!114 &1125936638 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3778160633183109732, guid: 855e309a4ba7d384cb1466e91e1084c4, type: 3}
+  m_PrefabInstance: {fileID: 1121591101}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1a934e585c9f824e83d4719ecd0d80b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1146653484 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7842324045269554985, guid: a10def864d751d140b9b48bdcf00efb3, type: 3}
@@ -1722,7 +1733,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1786265520}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c139cdd3a397dc6428f561effd921d38, type: 3}
+  m_Script: {fileID: 11500000, guid: d3dc2a9d9f7ba7140bd41b4d88abb364, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Speech: {fileID: 72156335}
@@ -1765,7 +1776,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 883.47485, y: -458}
-  m_SizeDelta: {x: 153.0503, y: 138.9191}
+  m_SizeDelta: {x: 180, y: 180}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1904002364
 MonoBehaviour:
@@ -1814,7 +1825,7 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1125936638}
         m_TargetAssemblyTypeName: PapersManager, Assembly-CSharp
         m_MethodName: ShowHidePapers
         m_Mode: 0
@@ -1847,8 +1858,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 400a0033ca4adbd459152bedd212e5fa, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -2460,10 +2471,22 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 1786265522}
     m_Modifications:
+    - target: {fileID: 5470289235231973075, guid: 65056f276f7cf6749b60254f2a9190eb, type: 3}
+      propertyPath: m_fontSize
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5470289235231973075, guid: 65056f276f7cf6749b60254f2a9190eb, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 5470289235385897409, guid: 65056f276f7cf6749b60254f2a9190eb, type: 3}
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 519420031}
+    - target: {fileID: 5470289235385897409, guid: 65056f276f7cf6749b60254f2a9190eb, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5470289235385897412, guid: 65056f276f7cf6749b60254f2a9190eb, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
