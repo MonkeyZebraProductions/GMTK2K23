@@ -9,6 +9,11 @@ public class DragObject : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDr
     public Transform parentAfterDrag;
     public bool IsSnap;
     public Image RayTarget;
+
+    void Start()
+    {
+        RayTarget.raycastTarget = true;
+    }
     public void OnBeginDrag(PointerEventData eventData)
     {
         Debug.Log("Begin Drag");
