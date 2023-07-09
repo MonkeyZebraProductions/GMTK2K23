@@ -9,6 +9,6 @@ public class Client : Person
         //Randomise values for things client wants
 
         //Spawn those papers
-        PapersManager.instance.SpawnPapers(this, true, true, true, false, PapersManager.Countries.Kanjo);
+        PapersManager.instance.SpawnPapers(this, true, true, true, true, PapersManager.Countries.Kanjo);
     }
 }
