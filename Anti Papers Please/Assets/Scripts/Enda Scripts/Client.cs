@@ -6,6 +6,9 @@ public class Client : Person
 {
     void Start()
     {
-        PapersManager.instance.SpawnPapers(this, true, true, true, false, PapersManager.Countries.Dawinkus);
+        //Randomise values for things client wants
+
+        //Spawn those papers
+        PapersManager.instance.SpawnPapers(this, true, true, true, false, PapersManager.Countries.Kanjo);
     }
 }

@@ -22,8 +22,12 @@ public class PapersManager : MonoBehaviour
     [SerializeField]
     private Transform passportParent;
 
+    //Current Client details
     private Person currentPerson;
+    //ADD ARRAY FOR PAPERS
+    private List<GameObject> papers = new List<GameObject>();
 
+    //All doccument types
     [SerializeField]
     private List<GameObject> passports = new List<GameObject>();
     [SerializeField]
@@ -33,8 +37,6 @@ public class PapersManager : MonoBehaviour
     [SerializeField]
     private GameObject vehicleReg;
 
-    //ADD ARRAY FOR PAPERS
-    private List<GameObject> papers = new List<GameObject>();
 
     private void Awake()
     {
@@ -47,7 +49,13 @@ public class PapersManager : MonoBehaviour
             instance = this;
         }
 
-        //Initialise bans list
+        //Initialise bans lists... oh dear list within list is scuffed
+        bans.Add(new List<Countries>());
+        bans.Add(new List<Countries>());
+        bans.Add(new List<Countries>());
+        bans.Add(new List<Countries>());
+        bans.Add(new List<Countries>());
+
         //Dawinkus
         bans[0].Add(Countries.Moosemin);
 
@@ -73,22 +81,46 @@ public class PapersManager : MonoBehaviour
     {
         currentPerson = person;
 
-        //print
+        int countryIndex = (int)location;
+        Debug.Log("[Enda] Index is: "+countryIndex);
+
+        GameObject temp;
         if(passport)
         {
             Debug.Log("[PapersManager] Spawned passport");
             //spawn Passport
-            GameObject temp = Instantiate(passports[0],passportParent);
+            temp = Instantiate(passports[countryIndex],passportParent);
             papers.Add(temp);
         }
         if(idCard)
+        {
             Debug.Log("[PapersManager] Spawned id card");
             //spawn Id Card
+            temp = Instantiate(idCards[countryIndex],passportParent);
+            papers.Add(temp);
+        }
         if(visa)
+        {
             Debug.Log("[PapersManager] Spawned visa");
             //spawn visa
+            temp = Instantiate(visas[countryIndex],passportParent);
+            papers.Add(temp);
+        }
         if(vehReg)
+        {
             Debug.Log("[PapersManager] Spawned vehicle registration form");
             //spawn vehicle registration form.
+            temp = Instantiate(vehicleReg,passportParent);
+            papers.Add(temp);
+        }
     }
+
+    public bool ValidatePapers()
+    {
+        //Here's where we're putting the validate code.
+
+
+        return false;
+    }
+
 }
