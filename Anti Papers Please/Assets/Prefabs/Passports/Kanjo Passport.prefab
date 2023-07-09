@@ -1259,6 +1259,7 @@ GameObject:
   - component: {fileID: 2248009282565705197}
   - component: {fileID: 2248009282565705196}
   - component: {fileID: 2248009282565705199}
+  - component: {fileID: -872118394004697003}
   m_Layer: 5
   m_Name: Kanjo Passport
   m_TagString: Untagged
@@ -1345,6 +1346,37 @@ MonoBehaviour:
   parentAfterDrag: {fileID: 0}
   IsSnap: 0
   RayTarget: {fileID: 0}
+--- !u!114 &-872118394004697003
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2248009282565704977}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e753ac56f59959448997936ee7db2df5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NameField: {fileID: 2248009282360737529}
+  DOBField: {fileID: 2248009282759912600}
+  ExpiryDateField: {fileID: 6433347698028814282}
+  PassportNoField: {fileID: 2773297112741017352}
+  VehicleRegField: {fileID: 0}
+  IDNoField: {fileID: 0}
+  Name: 
+  DOB: 
+  ExpiryDate: 
+  PassportNo: 
+  VehicleReg: 
+  IDNo: 
+  Birthplace: {fileID: 2248009282145507168}
+  VehicleType: {fileID: 0}
+  BirthplaceValue: 0
+  VehicleValue: 0
+  PhotoSlot: {fileID: 5673213689294480750}
+  PhotoChild: {fileID: 0}
+  DocumentType: 0
 --- !u!1 &2248009282602266490
 GameObject:
   m_ObjectHideFlags: 0

@@ -3113,6 +3113,7 @@ GameObject:
   - component: {fileID: 7473319738192677899}
   - component: {fileID: 7473319738192677896}
   - component: {fileID: 7473319738192677898}
+  - component: {fileID: 5486613986323529095}
   m_Layer: 5
   m_Name: Kanjo ID
   m_TagString: Untagged
@@ -3199,6 +3200,37 @@ MonoBehaviour:
   parentAfterDrag: {fileID: 0}
   IsSnap: 0
   RayTarget: {fileID: 0}
+--- !u!114 &5486613986323529095
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7473319738192677910}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e753ac56f59959448997936ee7db2df5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NameField: {fileID: 7473319736892293007}
+  DOBField: {fileID: 7473319737044914805}
+  ExpiryDateField: {fileID: 7473319738624185341}
+  PassportNoField: {fileID: 0}
+  VehicleRegField: {fileID: 0}
+  IDNoField: {fileID: 7473319738270384072}
+  Name: 
+  DOB: 
+  ExpiryDate: 
+  PassportNo: 
+  VehicleReg: 
+  IDNo: 
+  Birthplace: {fileID: 7473319736782902827}
+  VehicleType: {fileID: 0}
+  BirthplaceValue: 0
+  VehicleValue: 0
+  PhotoSlot: {fileID: 7473319736899325036}
+  PhotoChild: {fileID: 0}
+  DocumentType: 1
 --- !u!1 &7473319738247486344
 GameObject:
   m_ObjectHideFlags: 0

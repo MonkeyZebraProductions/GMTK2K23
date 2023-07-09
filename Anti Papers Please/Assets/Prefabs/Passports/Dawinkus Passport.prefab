@@ -843,6 +843,7 @@ GameObject:
   - component: {fileID: 5675600770475123522}
   - component: {fileID: 5675600770475123523}
   - component: {fileID: 5675600770475123520}
+  - component: {fileID: -4112211753297539580}
   m_Layer: 5
   m_Name: Dawinkus Passport
   m_TagString: Untagged
@@ -929,6 +930,37 @@ MonoBehaviour:
   parentAfterDrag: {fileID: 0}
   IsSnap: 0
   RayTarget: {fileID: 0}
+--- !u!114 &-4112211753297539580
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5675600770475123646}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e753ac56f59959448997936ee7db2df5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NameField: {fileID: 5675600770806976598}
+  DOBField: {fileID: 5675600770669019703}
+  ExpiryDateField: {fileID: 627856297283547493}
+  PassportNoField: {fileID: 8614818032596621735}
+  VehicleRegField: {fileID: 0}
+  IDNoField: {fileID: 0}
+  Name: 
+  DOB: 
+  ExpiryDate: 
+  PassportNo: 
+  VehicleReg: 
+  IDNo: 
+  Birthplace: {fileID: 5675600771129162191}
+  VehicleType: {fileID: 0}
+  BirthplaceValue: 0
+  VehicleValue: 0
+  PhotoSlot: {fileID: 6308451222317904153}
+  PhotoChild: {fileID: 0}
+  DocumentType: 0
 --- !u!1 &5675600770512159189
 GameObject:
   m_ObjectHideFlags: 0

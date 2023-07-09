@@ -2839,6 +2839,7 @@ GameObject:
   - component: {fileID: 5218478357594594376}
   - component: {fileID: 5218478357594594377}
   - component: {fileID: 5218478357594594378}
+  - component: {fileID: 4032604801370637939}
   m_Layer: 5
   m_Name: Yasush Passport
   m_TagString: Untagged
@@ -2925,6 +2926,37 @@ MonoBehaviour:
   parentAfterDrag: {fileID: 0}
   IsSnap: 0
   RayTarget: {fileID: 0}
+--- !u!114 &4032604801370637939
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5218478357594594484}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e753ac56f59959448997936ee7db2df5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NameField: {fileID: 5218478357813210972}
+  DOBField: {fileID: 5218478357683780925}
+  ExpiryDateField: {fileID: 1017423497170046575}
+  PassportNoField: {fileID: 8153188666725508781}
+  VehicleRegField: {fileID: 0}
+  IDNoField: {fileID: 0}
+  Name: 
+  DOB: 
+  ExpiryDate: 
+  PassportNo: 
+  VehicleReg: 
+  IDNo: 
+  Birthplace: {fileID: 5218478357207910085}
+  VehicleType: {fileID: 0}
+  BirthplaceValue: 0
+  VehicleValue: 0
+  PhotoSlot: {fileID: 7916504019091639370}
+  PhotoChild: {fileID: 0}
+  DocumentType: 0
 --- !u!1 &5218478357683780927
 GameObject:
   m_ObjectHideFlags: 0

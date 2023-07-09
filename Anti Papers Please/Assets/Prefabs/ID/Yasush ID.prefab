@@ -3729,6 +3729,7 @@ GameObject:
   - component: {fileID: 7597639639101260857}
   - component: {fileID: 7597639639101260858}
   - component: {fileID: 7597639639101260856}
+  - component: {fileID: 7552352511158593669}
   m_Layer: 5
   m_Name: Yasush ID
   m_TagString: Untagged
@@ -3815,6 +3816,37 @@ MonoBehaviour:
   parentAfterDrag: {fileID: 0}
   IsSnap: 0
   RayTarget: {fileID: 0}
+--- !u!114 &7552352511158593669
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7597639639101260836}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e753ac56f59959448997936ee7db2df5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NameField: {fileID: 7597639637851207613}
+  DOBField: {fileID: 7597639637969361479}
+  ExpiryDateField: {fileID: 7597639638537280463}
+  PassportNoField: {fileID: 0}
+  VehicleRegField: {fileID: 0}
+  IDNoField: {fileID: 7597639638754818042}
+  Name: 
+  DOB: 
+  ExpiryDate: 
+  PassportNo: 
+  VehicleReg: 
+  IDNo: 
+  Birthplace: {fileID: 7597639638231113241}
+  VehicleType: {fileID: 0}
+  BirthplaceValue: 0
+  VehicleValue: 0
+  PhotoSlot: {fileID: 7597639637844214878}
+  PhotoChild: {fileID: 0}
+  DocumentType: 1
 --- !u!1 &7597639639124586782
 GameObject:
   m_ObjectHideFlags: 0

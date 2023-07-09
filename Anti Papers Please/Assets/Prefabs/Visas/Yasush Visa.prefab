@@ -760,6 +760,7 @@ GameObject:
   - component: {fileID: 3577387247837504297}
   - component: {fileID: 3577387247837504310}
   - component: {fileID: 3577387247837504311}
+  - component: {fileID: 1846703802586334154}
   m_Layer: 5
   m_Name: Yasush Visa
   m_TagString: Untagged
@@ -845,6 +846,37 @@ MonoBehaviour:
   parentAfterDrag: {fileID: 0}
   IsSnap: 0
   RayTarget: {fileID: 0}
+--- !u!114 &1846703802586334154
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3577387247837504309}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e753ac56f59959448997936ee7db2df5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NameField: {fileID: 3577387249573131414}
+  DOBField: {fileID: 3577387249559744302}
+  ExpiryDateField: {fileID: 2092272489}
+  PassportNoField: {fileID: 0}
+  VehicleRegField: {fileID: 0}
+  IDNoField: {fileID: 0}
+  Name: 
+  DOB: 
+  ExpiryDate: 
+  PassportNo: 
+  VehicleReg: 
+  IDNo: 
+  Birthplace: {fileID: 3577387249031132566}
+  VehicleType: {fileID: 0}
+  BirthplaceValue: 0
+  VehicleValue: 0
+  PhotoSlot: {fileID: 3577387248400045886}
+  PhotoChild: {fileID: 0}
+  DocumentType: 2
 --- !u!1 &3577387247931592414
 GameObject:
   m_ObjectHideFlags: 0
