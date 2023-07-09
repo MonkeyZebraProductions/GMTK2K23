@@ -23,6 +23,8 @@ public class PapersManager : MonoBehaviour
     [SerializeField]
     private Transform passportParent;
 
+    public bool papersHidden;
+
     //Current Client details
     private Person currentPerson;
     private Request currentRequest;
@@ -277,6 +279,7 @@ public class PapersManager : MonoBehaviour
         {
             paper.SetActive(toggle);
         }
+        papersHidden = toggle;
     }
 
 }

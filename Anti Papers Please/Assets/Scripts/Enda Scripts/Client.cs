@@ -4,12 +4,13 @@ using UnityEngine;
 
 public class Client : Person
 {
-    private Request request = new Request();
+    private Request request;// = new Request();
 
-    public int car; //WHEN SPAWNED ASSIGN CAR NUMBER.
+    //public int car; //WHEN SPAWNED ASSIGN CAR NUMBER.
 
     void Start()
     {
+        request = new Request();
         Speak(request.requestDialogue);
 
         //Spawn those papers

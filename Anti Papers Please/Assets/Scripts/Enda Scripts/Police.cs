@@ -4,5 +4,16 @@ using UnityEngine;
 
 public class Police : Person
 {
-    
+
+    void Start()
+    {
+        if(!PapersManager.instance.papersHidden || !GameManager.instance.IsGearOut) //gonna have an or from game manager "isGearOut"
+        {
+            Speak("Oofy doofy");
+            //end game
+        } else {
+            Speak("Just a routine check up... everything looks fine.");
+        }
+
+    }
 }

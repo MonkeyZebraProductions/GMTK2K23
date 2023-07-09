@@ -6,12 +6,15 @@ using System;
 
 public class GameManager : MonoBehaviour
 {
+    private bool gameIsRunning;
     public float TimeLimit;
     public GameObject Gear;
     public TMP_Text TimerText;
 
     private float timer;
     public bool IsGearOut;
+
+    private bool copIsPresent;
 
     public static GameManager instance { get; private set;}
 
@@ -25,11 +28,13 @@ public class GameManager : MonoBehaviour
         {
             instance = this;
         }
+
+        gameIsRunning = true;
     }
     // Start is called before the first frame update
     void Start()
     {
-        
+        StartCoroutine(CopCoroutine());
     }
 
     // Update is called once per frame
@@ -44,5 +49,21 @@ public class GameManager : MonoBehaviour
             Debug.Log("It's Over Bro");
         }
 
+        
+
+    }
+
+    IEnumerator CopCoroutine()
+    {
+        while(gameIsRunning)
+        {
+            yield return new WaitForSeconds(20);
+            if(UnityEngine.Random.value > 0.5 && !copIsPresent)
+            {
+                copIsPresent = true;
+                //Spawn cop
+            }
+        }
+        
     }
 }
