@@ -32,7 +32,7 @@ Transform:
   m_Children:
   - {fileID: 6869288239624622015}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &6869288240548980989
 SpriteRenderer:
@@ -111,15 +111,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5470289235231973075, guid: 65056f276f7cf6749b60254f2a9190eb, type: 3}
       propertyPath: m_fontSize
-      value: 0.5
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 5470289235231973075, guid: 65056f276f7cf6749b60254f2a9190eb, type: 3}
       propertyPath: m_fontSizeBase
-      value: 0.5
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 5470289235385897409, guid: 65056f276f7cf6749b60254f2a9190eb, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5470289235385897412, guid: 65056f276f7cf6749b60254f2a9190eb, type: 3}
       propertyPath: m_Pivot.x
