@@ -329,6 +329,18 @@ MonoBehaviour:
   Gear: {fileID: 2022532962}
   TimerText: {fileID: 1439458119}
   IsGearOut: 0
+  cars:
+  - {fileID: 5321722906947161473, guid: f5e0000f1d64b434ba1e54544e9cf95b, type: 3}
+  - {fileID: 8361327508038374098, guid: f9186b8226323d94a8c45f18892f398a, type: 3}
+  - {fileID: 978405506954820743, guid: 7827709b8704d1b4fae5415b84c024af, type: 3}
+  - {fileID: 3113829620997932694, guid: 5232c00aa68f29e45a08b20015bed864, type: 3}
+  - {fileID: 7511859341084418465, guid: a5dcec7b682183144b80e45c8b81f0a1, type: 3}
+  - {fileID: 5933619388192365455, guid: dc37a264938b75b47b3cd0c39f5b9c2f, type: 3}
+  - {fileID: 4923504279272415897, guid: d8947ffff4e740b4fbaaaa100eaba418, type: 3}
+  - {fileID: 8769062134889535306, guid: 672bb11a040530947ba645fc27546d4d, type: 3}
+  - {fileID: 5933619388192365455, guid: dc37a264938b75b47b3cd0c39f5b9c2f, type: 3}
+  people: []
+  cop: {fileID: 0}
 --- !u!4 &653379412 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2705705018772048799, guid: 36e03aee0f4a6f442b29bec8b336cf0d, type: 3}
